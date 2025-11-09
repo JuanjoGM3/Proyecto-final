@@ -1,6 +1,6 @@
-package model;
+package model.DTO;
 
-public class Direccion {
+public class DireccionDTO {
 	
 	private String id;
 	private String alias;
@@ -8,7 +8,7 @@ public class Direccion {
 	private String ciudad;
 	private String cordenadas;
 	
-	public Direccion(String id, String alias, String calle, String ciudad, String cooedenadas) {
+	public DireccionDTO(String id, String alias, String calle, String ciudad, String cooedenadas) {
 		this.id = id;
 		this.alias = alias;
 		this.calle = calle;
@@ -46,3 +46,4 @@ public class Direccion {
 		this.cordenadas = cordenadas;
 	}
 }
+

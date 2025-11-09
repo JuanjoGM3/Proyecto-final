@@ -1,17 +1,14 @@
-package model;
+package model.DTO;
 
-import java.time.LocalDateTime;
-
-public class Pago {
+public class PagoDTO {
+	
 	private String id;
 	private double monto;
-	private LocalDateTime fecha;
 	private boolean resultado;
 	
-	public Pago(String id, double monto) {
+	public PagoDTO(String id, double monto) {
 		this.id = id;
 		this.monto = monto;
-		this.fecha = LocalDateTime.now();
 		this.resultado = false;
 	}
 	public String getId() {
@@ -26,12 +23,6 @@ public class Pago {
 	public void setMonto(double monto) {
 		this.monto = monto;
 	}
-	public LocalDateTime getFecha() {
-		return fecha;
-	}
-	public void setFecha(LocalDateTime fecha) {
-		this.fecha = fecha;
-	}
 	public boolean isResultado() {
 		return resultado;
 	}
@@ -39,3 +30,4 @@ public class Pago {
 		this.resultado = resultado;
 	}
 }
+

@@ -12,17 +12,20 @@ public class Envio {
 	private double costo;
 	private LocalDateTime fechaCreacion;
 	private LocalDateTime fechaEntrega;
+	private Estado estado;
 	
-	public Envio(String id, Direccion origen, Direccion destino, int peso, int dimenciones, double costo,
-			LocalDateTime fechaCreacion, LocalDateTime fechaEntrega) {
+	public enum Estado {SOLICITADO, ASIGNADO, ENRUTA, ENTREGADO, INCIDENCIA}
+	
+	public Envio(String id, Direccion origen, Direccion destino, int peso, int dimenciones, double costo, Estado estado) {
 		this.id = id;
 		this.origen = origen;
 		this.destino = destino;
 		this.peso = peso;
 		this.dimenciones = dimenciones;
 		this.costo = costo;
-		this.fechaCreacion = fechaCreacion;
+		this.fechaCreacion = LocalDateTime.now();
 		this.fechaEntrega = fechaEntrega;
+		this.estado = estado;
 	}
 	public String getId() {
 		return id;
@@ -71,5 +74,11 @@ public class Envio {
 	}
 	public void setFechaEntrega(LocalDateTime fechaEntrega) {
 		this.fechaEntrega = fechaEntrega;
+	}
+	public Estado getEstado() {
+		return estado;
+	}
+	public void setEstado(Estado estado) {
+		this.estado = estado;
 	}
 }
