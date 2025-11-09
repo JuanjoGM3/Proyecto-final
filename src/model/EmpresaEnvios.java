@@ -2,48 +2,56 @@ package model;
 
 import java.util.ArrayList;
 
-public class empresaEnvios {
+public class EmpresaEnvios {
 	
 	private ArrayList<Usuario> usuarios;
 	private ArrayList<Repartidor> repartidores;
 	private ArrayList<Pago> historialPagos;
 	private ArrayList<Direccion> direcciones;
-	private  static empresaEnvios instancia;
+	private ArrayList<Envio> envios;
+	private  static EmpresaEnvios instancia;
 	
-	public empresaEnvios() {
+	public EmpresaEnvios() {
 		this.usuarios = new ArrayList<>();
 		this.repartidores = new ArrayList<>();
 		this.historialPagos = new ArrayList<>();
 		this.direcciones = new ArrayList<>();
+		this.envios = new ArrayList<>();
 	}
-    public static empresaEnvios getInstancia() {
+    public static EmpresaEnvios getInstancia() {
         if (instancia == null) {
-            instancia = new empresaEnvios();
+            instancia = new EmpresaEnvios();
         }
         return instancia;
     }
 	public ArrayList<Usuario> getUsuarios() {
 		return usuarios;
 	}
-	public void setUsuarios(ArrayList<Usuario> usuarios) {
-		this.usuarios = usuarios;
+	public void addUsuarios(Usuario usuario) {
+		this.usuarios.add(usuario);
 	}
 	public ArrayList<Repartidor> getRepartidores() {
 		return repartidores;
 	}
-	public void setRepartidores(ArrayList<Repartidor> repartidores) {
-		this.repartidores = repartidores;
+	public void addRepartidores(Repartidor repartidore) {
+		this.repartidores.add(repartidore);
 	}
 	public ArrayList<Pago> getHistorialPagos() {
 		return historialPagos;
 	}
-	public void setHistorialPagos(ArrayList<Pago> historialPagos) {
-		this.historialPagos = historialPagos;
+	public void addHistorialPagos(Pago Pago) {
+		this.historialPagos.add(Pago);
 	}
 	public ArrayList<Direccion> getDirecciones() {
 		return direcciones;
 	}
-	public void setDirecciones(ArrayList<Direccion> direcciones) {
-		this.direcciones = direcciones;
+	public void addDirecciones(Direccion direccion) {
+		this.direcciones.add(direccion);
+	}
+	public ArrayList<Envio> getEnvios() {
+		return envios;
+	}
+	public void setEnvios(Envio envio) {
+		this.envios.add(envio);
 	}
 }
