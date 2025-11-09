@@ -1,26 +1,19 @@
-package model;
+package model.DTO;
 
-public class Direccion {
+public class DireccionDTO {
 	
 	private String id;
 	private String alias;
 	private String calle; 
 	private String ciudad;
-
-	private String cooedenadas;
 	private String cordenadas;
-
 	
-	public Direccion(String id, String alias, String calle, String ciudad, String cooedenadas) {
+	public DireccionDTO(String id, String alias, String calle, String ciudad, String cooedenadas) {
 		this.id = id;
 		this.alias = alias;
 		this.calle = calle;
 		this.ciudad = ciudad;
-
-		this.cooedenadas = cooedenadas;
-
 		this.cordenadas = cooedenadas;
-
 	}
 	public String getId() {
 		return id;
@@ -46,18 +39,11 @@ public class Direccion {
 	public void setCiudad(String ciudad) {
 		this.ciudad = ciudad;
 	}
-
-	public String getCooedenadas() {
-		return cooedenadas;
-	}
-	public void setCooedenadas(String cooedenadas) {
-		this.cooedenadas = cooedenadas;
-
 	public String getCordenadas() {
 		return cordenadas;
 	}
 	public void setCordenadas(String cordenadas) {
 		this.cordenadas = cordenadas;
- 
 	}
 }
+
