@@ -1,10 +1,9 @@
-package model.mappers;
+package utils;
 
 import model.Usuario;
 import model.DTO.UsuarioDTO;
 
 public class UsuarioMapper {
-
 	 public static UsuarioDTO toDTO(Usuario usuario) {
 		 if (usuario==null) {
 			 return null;
@@ -40,5 +39,6 @@ public class UsuarioMapper {
 		}
 	}
 	 
+
 
 

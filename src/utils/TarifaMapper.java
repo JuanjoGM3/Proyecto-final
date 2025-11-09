@@ -1,11 +1,9 @@
-package model.mappers;
+package utils;
 
 import model.Tarifa;
 import model.DTO.TarifaDTO;
 
 public class TarifaMapper {
-	
-
 	 public static TarifaDTO toDTO(Tarifa tarifa) {
 	        if (tarifa == null) {
 	            return null;
@@ -34,5 +32,8 @@ public class TarifaMapper {
 	        );
 	    }
 	}
+
+
+
 
 

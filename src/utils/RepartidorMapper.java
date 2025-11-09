@@ -1,10 +1,9 @@
-package model.mappers;
+package utils;
 
 import model.Repartidor;
 import model.DTO.RepartidorDTO;
 
 public class RepartidorMapper {
-	
 	public static RepartidorDTO toDTO(Repartidor repartidor) {
 		if(repartidor==null) {
 			return null;
@@ -32,14 +31,19 @@ public class RepartidorMapper {
 		
 					
 			public static void updateEntityFromDTO(Repartidor Entity, RepartidorDTO dto) {
-				if (entity == null || dto == null)
+				if (Entity == null || dto == null)
 					return;
-				entity.setNombre(dto.getNombre());
-				entity.setCorreo(dto.getCorreo());
-				entity.setTelefono(dto.getTelefono());
+				Entity.setNombre(dto.getNombre());
+				Entity.setCorreo(dto.getCorreo());
+				Entity.setTelefono(dto.getTelefono());
+			
 			}
 		
-	}
+		
+		}
 
 
 }
+
+}
+

@@ -1,18 +1,14 @@
-package model.Services;
-
-
-import model.Usuario;
-import model.DTO.UsuarioDTO;
-import model.mappers.UsuarioMapper;
+package services;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import model.Usuario;
+import model.DTO.UsuarioDTO;
+import utils.UsuarioMapper;
 
-	public class UsuarioService {
-
-	  
-	    private List<Usuario> listaUsuarios;
+public class UsuarioService {
+	  private List<Usuario> listaUsuarios;
 
 	    
 	    public UsuarioService() {
@@ -91,3 +87,6 @@ import java.util.List;
 	}
 
 
+
+
+}
