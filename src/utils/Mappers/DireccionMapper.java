@@ -26,7 +26,7 @@ public class DireccionMapper {
     }
     
     public static void updateEntityFromDTO(Direccion entity, DireccionDTO dto) {
-        if (entity == null || dto == null) return;
+        if (entity == null || dto == null)
 		        entity.setId(dto.getId());
 		        entity.setAlias(dto.getAlias());
 		        entity.setCalle(dto.getCalle());

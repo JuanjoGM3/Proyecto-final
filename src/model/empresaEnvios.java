@@ -2,25 +2,25 @@ package model;
 
 import java.util.ArrayList;
 
-public class EmpresaEnvios {
+public class empresaEnvios {
 	
 	private ArrayList<Usuario> usuarios;
 	private ArrayList<Repartidor> repartidores;
 	private ArrayList<Pago> historialPagos;
 	private ArrayList<Direccion> direcciones;
 	private ArrayList<Envio> envios;
-	private  static EmpresaEnvios instancia;
+	private  static empresaEnvios instancia;
 	
-	public EmpresaEnvios() {
+	public empresaEnvios() {
 		this.usuarios = new ArrayList<>();
 		this.repartidores = new ArrayList<>();
 		this.historialPagos = new ArrayList<>();
 		this.direcciones = new ArrayList<>();
 		this.envios = new ArrayList<>();
 	}
-    public static EmpresaEnvios getInstancia() {
+    public static empresaEnvios getInstancia() {
         if (instancia == null) {
-            instancia = new EmpresaEnvios();
+            instancia = new empresaEnvios();
         }
         return instancia;
     }

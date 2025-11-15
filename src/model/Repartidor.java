@@ -1,5 +1,7 @@
 package model;
 
+import java.util.ArrayList;
+
 public class Repartidor {
 	
 	private String id; 
@@ -7,7 +9,10 @@ public class Repartidor {
 	private String correo; 
 	private String telefono;
 	private zonaCobertura cobertura;
+	private Estado estado;
+	ArrayList<Envio> enviosAsignados;
 	
+	public enum Estado {ACTIVO,INACTIVO,ENRUTA}
 	public enum zonaCobertura {}
 	
 	public Repartidor(String id, String nombre, String correo, String telefono) {
@@ -15,6 +20,7 @@ public class Repartidor {
 		this.nombre = nombre;
 		this.correo = correo;
 		this.telefono = telefono;
+		this.enviosAsignados = new ArrayList<>();
 	}
 	public String getId() {
 		return id;
@@ -45,5 +51,17 @@ public class Repartidor {
 	}
 	public void setCobertura(zonaCobertura cobertura) {
 		this.cobertura = cobertura;
+	}
+	public Estado getEstado() {
+		return estado;
+	}
+	public void setEstado(Estado estado) {
+		this.estado = estado;
+	}
+	public ArrayList<Envio> getEnviosAsignados() {
+		return enviosAsignados;
+	}
+	public void addEnvio(Envio envio) {
+		this.enviosAsignados.add(envio);
 	}
 }

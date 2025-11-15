@@ -5,10 +5,10 @@ public class Tarifa {
 	private double distancia;
 	private double peso;
 	private double volumen;
-	private String prioridad;
+	private double prioridad;
 	private double recargosAdicionales;
 	
-	public Tarifa(double distancia, double peso, double volumen, String prioridad, double recargosAdicionales) {
+	public Tarifa(double distancia, double peso, double volumen, double prioridad, double recargosAdicionales) {
 		this.distancia = distancia;
 		this.peso = peso;
 		this.volumen = volumen;
@@ -33,10 +33,10 @@ public class Tarifa {
 	public void setVolumen(double volumen) {
 		this.volumen = volumen;
 	}
-	public String getPrioridad() {
+	public double getPrioridad() {
 		return prioridad;
 	}
-	public void setPrioridad(String prioridad) {
+	public void setPrioridad(double prioridad) {
 		this.prioridad = prioridad;
 	}
 	public double getRecargosAdicionales() {

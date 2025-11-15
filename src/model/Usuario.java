@@ -1,17 +1,23 @@
 package model;
 
+import java.util.ArrayList;
+
 public class Usuario {
 	
 	private String id; 
 	private String nombre; 
 	private String correo; 
 	private String telefono;
+	private ArrayList<Direccion> direcionesFrecuentes;
+	private String contraseña;
 	
-	public Usuario(String id, String nombre, String correo, String telefono) {
+	public Usuario(String id, String nombre, String correo, String telefono, String contraseña) {
 		this.id = id;
 		this.nombre = nombre;
 		this.correo = correo;
 		this.telefono = telefono;
+		this.direcionesFrecuentes = new ArrayList<>();
+		this.contraseña = contraseña;
 	}
 	public String getId() {
 		return id;
@@ -36,5 +42,17 @@ public class Usuario {
 	}
 	public void setTelefono(String telefono) {
 		this.telefono = telefono;
+	}
+	public ArrayList<Direccion> getDirecionesFrecuentes() {
+		return direcionesFrecuentes;
+	}
+	public void addDirecionesFrecuentes(Direccion direcion) {
+		this.direcionesFrecuentes.add(direcion);
+	}
+	public String getContraseña() {
+		return contraseña;
+	}
+	public void setContraseña(String contraseña) {
+		this.contraseña = contraseña;
 	}
 }

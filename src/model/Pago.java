@@ -8,17 +8,10 @@ public class Pago {
 	private LocalDateTime fecha;
 	private boolean resultado;
 	
-
-	public Pago(String id, double monto, LocalDateTime fecha) {
-		this.id = id;
-		this.monto = monto;
-		this.fecha = fecha;
-
 	public Pago(String id, double monto) {
 		this.id = id;
 		this.monto = monto;
 		this.fecha = LocalDateTime.now();
-
 		this.resultado = false;
 	}
 	public String getId() {

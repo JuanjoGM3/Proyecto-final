@@ -8,7 +8,7 @@ import model.DTO.EnvioDTO;
 public class envioService {
 	
 	EmpresaEnvios empresaEnvios;
-	
+
 	public envioService() {
 		this.empresaEnvios = EmpresaEnvios.getInstancia();
 	}
@@ -19,7 +19,7 @@ public class envioService {
 		}
 	}
 
-	private Envio buscarEnvioEntity(String id) {
+	public Envio buscarEnvioEntity(String id) {
 		for (Envio envio : empresaEnvios.getEnvios()) {
             if (envio.getId().equals(id)) {
                 return envio;

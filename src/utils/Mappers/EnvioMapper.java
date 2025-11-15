@@ -36,7 +36,7 @@ public class EnvioMapper {
     	
     	DireccionService direccionService = new DireccionService();
     	
-        if (entity == null || dto == null) return;
+        if (entity == null || dto == null)
 		        entity.setId(dto.getId());
 		        entity.setOrigen(direccionService.buscarDireccionEntity(dto.getIdOrigen()));
 		        entity.setDestino(direccionService.buscarDireccionEntity(dto.getIdDestino()));

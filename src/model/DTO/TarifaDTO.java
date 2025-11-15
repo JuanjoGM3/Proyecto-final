@@ -4,15 +4,10 @@ public class TarifaDTO {
 	private double distancia;
     private double peso;
     private double volumen;
-    private String prioridad;
+    private double prioridad;
     private double recargosAdicionales;
 
-
-    public TarifaDTO() {
-    }
-
-  
-    public TarifaDTO(double distancia, double peso, double volumen, String prioridad, double recargosAdicionales) {
+    public TarifaDTO(double distancia, double peso, double volumen, double prioridad, double recargosAdicionales) {
         this.distancia = distancia;
         this.peso = peso;
         this.volumen = volumen;
@@ -45,11 +40,11 @@ public class TarifaDTO {
         this.volumen = volumen;
     }
 
-    public String getPrioridad() {
+    public double getPrioridad() {
         return prioridad;
     }
 
-    public void setPrioridad(String prioridad) {
+    public void setPrioridad(double prioridad) {
         this.prioridad = prioridad;
     }
 

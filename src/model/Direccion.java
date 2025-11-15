@@ -52,7 +52,7 @@ public class Direccion {
 	}
 	public void setCooedenadas(String cooedenadas) {
 		this.cooedenadas = cooedenadas;
-
+	}
 	public String getCordenadas() {
 		return cordenadas;
 	}
